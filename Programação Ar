@@ -1,0 +1,51 @@
+const int buttonPin = 2;
+int buttonState = 0; 
+
+
+int horas = 1;
+
+void setup() {
+  
+pinMode (3,OUTPUT);
+
+pinMode(buttonPin,INPUT);
+
+Serial.begin(9600);
+}
+
+void loop() {
+
+Serial.println (horas);
+
+buttonState = digitalRead(buttonPin);
+
+
+if (buttonState == HIGH && horas < 22 && horas > 6){
+
+digitalWrite(3, HIGH);
+
+
+} else {
+
+  digitalWrite (3,LOW);
+}
+
+if (buttonState == LOW){
+
+digitalWrite(3, LOW);
+
+
+}
+
+if (horas > 22){
+
+horas = -1;
+
+
+}
+
+
+horas = horas + 1;
+
+delay (2000); 
+}
