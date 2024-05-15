@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+function senai() {
+        var inicio = document.Form1.Ftimei.value;
+        var fim = document.Form1.Ftimef.value;
+        
+    
+        alert("Hora de Início: " + inicio + "\nHora de Fim: " + fim);
+        
+        return false;
+    }
+
+</script>
+
+</head>
+<body background="Img/back.png">
+    <a href='Aumento de Temperatura.html'> <img src='Img/Voltar.png' width='6%''></a>
+    <br><br>
+    <font face='arial' size='6'>
+    <center>
+        
+    <font size="6" color="c5ece7"><b> HORARIO DE <br> FUNCIONAMENTO </b> </font> </center>
+
+    <br><br>
+
+    <form name="Form1" action="" method="post" onsubmit="return senai()">
+    
+    <center>
+        <font size="6" color="70abaf"><b> 
+        INICIO:
+        </b></font>
+    <input type="time" name="Ftimei" style="background-color: darkgray; color: black;">
+    <br><br>
+        <font size="6" color="70abaf"><b>
+        FIM:
+        </b></font>
+    <input type="time" name="Ftimef" style="background-color: darkgray; color: black;">
+    <br><br>
+    <input type="submit" value="GRAVAR" style="width: 100px; height: 30px; color: aquamarine; background-color: black;">
+    </form>
+</body>
+</html>
